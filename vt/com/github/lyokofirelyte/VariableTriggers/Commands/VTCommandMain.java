@@ -180,8 +180,8 @@ public class VTCommandMain implements AR {
 				
 				case "run":
 					
-					if (p instanceof Player){
-						Player user = args.length == 3 ? Bukkit.getPlayer(args[2]) : ((Player) p);
+					if (true){
+						Player user = args.length == 3 ? Bukkit.getPlayer(args[2]) : null;
 						String[] vars = args[1].split("\\:");
 						if (main.vars.getScripts().containsKey(vars[0] + "_" + vars[1])){
 							new VTParser(main, vars[0], vars[1], main.vars.getScripts().get(vars[0] + "_" + vars[1]), user.getLocation(), new HashMap<String, String>(), user.getName()).start();
